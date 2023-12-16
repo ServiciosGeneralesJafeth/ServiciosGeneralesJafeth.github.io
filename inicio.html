@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jafeth_perusac</title>
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="Styles/styleInicio.css">
+    <link rel="stylesheet" href="Styles/whatsapp.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+</head>
+<body>
+
+  <a href="https://api.whatsapp.com/send?phone=+51912434359&text=¡Hola,%20necesito%20un%20en%20escribirnos!" class="float" target="_blank">
+    <i class="fab fa-whatsapp my-float"></i>
+  </a>
+
+  <div class="star-effect-container">
+    <header class = "header">
+        <div class="menu container">
+
+            <a href="inicio.html" class="logo">
+                <img src="/Imagenes/Logo/Logo2.png" alt="">
+            </a>
+            
+
+            <nav class="navbar">    
+        
+                <div class=" right "></div>
+                    <ul>
+                        <li><a href="inicio.html">Inicio</a></li>
+                        <li><a href="nosotros.html">¿Quienes somos?</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+        
+                    </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="information container">
+        <div class="swiper-content ">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="Imagenes/Inicio/Pintura.png" alt=""></div>
+              <div class="swiper-slide"><img src="Imagenes/Inicio/Electricidad.png" alt=""></div>
+              <div class="swiper-slide"><img src="Imagenes/Inicio/Construccion.png" alt=""></div>
+              <div class="swiper-slide"><img src="Imagenes/Inicio/drywall1.PNG" alt=""></div>
+              <div class="swiper-slide"><img src="Imagenes/Inicio/ACC.png" alt=""></div>
+              <div class="swiper-slide"><img src="Imagenes/Inicio/PanelSolar.png" alt=""></div>
+              <div class="swiper-slide"><img src="Imagenes/Inicio/Mudanza.png" alt=""> 7</div>
+              <div class="swiper-slide"><img src="Imagenes/Inicio/Camaras.png" alt=""></div>
+              <div class="swiper-slide"><img src="Imagenes/Inicio/Soldadura.png" alt=""></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-content">
+          <!-- Aquí se mostrará el texto dinámico -->
+          <h3 id="slide-title">Acabados de pintura</h3>
+          <p id="slide-description">Desde acabos en el hogar hasta pintura epóxica para acabados en metal</p>
+          <a href="contacto.html#contacto" class="btn">Solicitar</a>
+      </div>
+    </section>
+  </div>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="JS/inicio.js"></script>
+    <script>
+     // Continúa con tu arreglo slideData...
+
+const swiper = new Swiper(".mySwiper", {
+    grabCursor: true,
+    effect: "creative",
+    creativeEffect: {
+        prev: {
+            shadow: true,
+            translate: [0, 0, -400],
+        },
+        next: {
+            translate: ["100%", 0, 0],
+        },
+    },
+    autoplay: {
+        delay: 4000, // El retardo entre transiciones (en milisegundos).
+        disableOnInteraction: false, // No desactivar después de interacciones del usuario (arrastres, clics, etc.)
+    },
+    speed: 2000, // Ajusta la velocidad de la animación de la transición (en milisegundos).
+    on: {
+        slideChange: function () {
+            // Obtiene los elementos del DOM para el título y la descripción
+            var titleElement = document.getElementById("slide-title");
+            var descriptionElement = document.getElementById("slide-description");
+
+            // Obtiene los datos del slide actual
+            var currentSlideData = slideData[this.activeIndex];
+
+            // Actualiza el contenido del título y la descripción
+            titleElement.textContent = currentSlideData.title;
+            descriptionElement.textContent = currentSlideData.description;
+        }
+    }
+});
+
+// Inicializa el contenido con la primera diapositiva
+swiper.emit('slideChange');
+
+    </script>
+    
+    
+ 
+
+ 
+</body>
+<footer class="site-footer container">
+  <div class="contenedor">
+    <div class="footer-content">
+      <h3>Contacto</h3>
+      <p>Dirección: Av.27 de diciembre, Villa Maria del Triunfo</p>
+      <p>Teléfono: +51 912 434 359</p>
+      <p>Email: jafeth_perusac@outlook.com</p>
+    </div>
+    <div class="footer-social">
+      <h3>Conócenos</h3>
+      <a href="inicio.html" target="_blank">Inicio</a>
+      <a href="nosotros.html" target="_blank">Nosotros</a>
+      <a href="servicios.html" target="_blank">Servicios</a>
+      <a href="contacto.html" target="_blank">Contacto</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2023 Jafeth-Peru S.A.C. Todos los derechos reservados.</p>
+  </div>
+</footer>
+</html>

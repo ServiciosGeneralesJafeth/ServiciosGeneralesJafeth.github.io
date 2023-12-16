@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jafeth_perusac</title>
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="Styles/contacto.css">
+    <link rel="stylesheet" href="Styles/whatsapp.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+</head>
+<body>
+    <a href="https://api.whatsapp.com/send?phone=+51912434359&text=¡Hola,%20no%20dudes%20en%20escribirnos!" class="float" target="_blank">
+      <i class="fab fa-whatsapp my-float"></i>
+    </a>
+    <div class="star-effect-container">
+        <header class = "header">  
+            <div class="menu container">
+                <a href="inicio.html" class="logo">
+                    <img src="/Imagenes/Logo/Logo2.png" alt="">
+                </a>
+      
+
+                <nav class="navbar">    
+            
+                    <div class=" right "></div>
+                        <ul>
+                            <li><a href="inicio.html">Inicio</a></li>
+                            <li><a href="nosotros.html">¿Quienes somos?</a></li>
+                            <li><a href="servicios.html">Servicios</a></li>
+                            <li><a href="contacto.html">Contacto</a></li>
+            
+                        </ul>
+                </nav>
+                </div>
+
+            
+        </header>      
+
+        <section class="Descripcion container">
+            <h1>¡Contáctenos!</h1>
+            <p>No dudes en escribirnos, atendemos todas tus consultas</p>
+        </section>
+    </div>
+    <section id="contacto" class=" form_Inicio container" >
+        <div class="form_Info">
+   
+            <img src="Imagenes/Logo/Logo3.png" alt="Imagen Central" class="central-img">
+            <h1>¡En Jafeth Perú S.A.C, brindamos las soluciones mas eficientes del mercado!</h1>
+            <div class="info-item">
+              <img src="Imagenes/Contacto/Iconos/llamada.png" alt="Teléfono" class="icon">
+              <p>+51 912 434 359</p>
+            </div>
+            <div class="info-item">
+              <img src="Imagenes/Contacto/Iconos/correo.png" alt="Email" class="icon">
+              <p>jafeth_perusac@outlook.com</p>
+            </div>
+        </div>
+        <div class=" formularioI">
+            <h2>¡Deja tu consulta!</h2> 
+            <form action="https://formsubmit.co/jafeth_perusac@outlook.com" method="POST"><!-- no olvidar ajustar correo -->
+                <label for="name">Nombre</label>
+                <input type="text" name="name" id="name" pattern="[A-Za-z ]+" title="Por favor, ingrese solo letras." required>
+
+                <label for="email">Correo electrónico</label>
+                <input type="email" name="email" id = "email" required>
+
+                <label for="number">Móvil</label>
+                <input type="text" name="number" id="number" maxlength="9" minlength="9" pattern="\d{9}" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');" required>
+                
+                <label for="subject">Asunto</label>
+                <input type="text" name="subject" id = "subject" required>
+
+                <label for="solicitud">Describa lo que necesita</label>
+                <textarea name="solicitud" id="solicitud" cols="30" rows="5" required></textarea>   
+
+                <input class="btn" type="submit" value="Enviar">
+                <!--<input type="hidden" name="_subject" value="¡Nuevo envío!">
+                Asegúrate de que la URL a la que rediriges es correcta y accesible -->
+                <input type="hidden" name="_next" value="http://127.0.0.1:5500/gracias.html">
+                <input type="hidden" name="_captcha" value="false">
+            </form>
+        </div>
+
+    </section>
+
+
+
+
+
+    <section class="Ubicacion container">
+        <div class="mapa ">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7799.61566493672!2d-76.93246013590644!3d-12.193475258888975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105b93842ca3095%3A0xd90f2633d838386f!2sAv.%2027%20de%20Diciembre%20466%2C%20Lima%2015818%2C%20Per%C3%BA!5e0!3m2!1ses-419!2ses!4v1702556158304!5m2!1ses-419!2ses" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+    
+<script src="js/contacto.js"></script>
+</body>
+<footer class="site-footer container">
+  <div class="contenedor">
+    <div class="footer-content">
+      <h3>Contacto</h3>
+      <p>Dirección: Av.27 de diciembre, Villa Maria del Triunfo</p>
+      <p>Teléfono: +51 912 434 359</p>
+      <p>Email: jafeth_perusac@outlook.com</p>
+    </div>
+    <div class="footer-social">
+      <h3>Conócenos</h3>
+      <a href="inicio.html" target="_blank">Inicio</a>
+      <a href="nosotros.html" target="_blank">Nosotros</a>
+      <a href="servicios.html" target="_blank">Servicios</a>
+      <a href="contacto.html" target="_blank">Contacto</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2023 Jafeth-Peru S.A.C. Todos los derechos reservados.</p>
+  </div>
+</footer>
+</html>
